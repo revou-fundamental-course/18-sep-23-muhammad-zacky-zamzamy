@@ -1,0 +1,592 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  font-size: 0.8em;
+  background-color: #000000;
+}
+
+.container {
+  display: grid;
+  background-color: #000000;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+}
+
+#hero {
+  background: linear-gradient(135deg, #2f1e84 0%, #5d63ed 100%);
+  color: #fff;
+  height: 149px;
+  padding: 36px 50px;
+  border-radius: 0px 0px 85px 85px;
+}
+
+.wrapper h1 {
+  font-size: 36px;
+  height: 10px;
+  margin-right: -17px;
+}
+
+#description {
+  width: 58%;
+  font-size: 16px;
+  margin: 50px 2px 5px;
+}
+
+.td-label {
+  width: 50%;
+  text-align: left;
+}
+
+.input-box {
+  height: 29px;
+  width: 95%;
+  border-radius: 5px;
+  padding: 0px 8px;
+  font-weight: 600;
+  border-style: none;
+}
+
+/* input form */
+.calculation-box {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.header p:first-child,
+.result-box .result p:first-child {
+  font-size: 2em;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.result-box .result p:last-child {
+  font-size: 0.7em;
+  width: 100px;
+  padding: 10px;
+  color: white;
+  margin-top: 2px;
+  border-radius: 5px;
+}
+
+.header {
+  font-size: 10px;
+}
+
+.calculation-box .form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form {
+  background: linear-gradient(135deg, #2f1e84 0%, #5d63ed 100%);
+  margin: 30px;
+  margin-top: 10px;
+  padding: 2.5rem 5rem 3.5rem;
+  border-radius: 18px;
+  font-size: 20px;
+}
+
+.form .btn-form {
+  padding: 12px 5px 0px 10px;
+  margin: 20px -8px;
+}
+
+.form .btn-form button {
+  margin: 15px 0px 5px -6px 10px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 0;
+  font-size: 17px;
+}
+
+.form .btn-form button:hover {
+  cursor: pointer;
+}
+
+.form .gender-label {
+  color: #fff;
+  font-weight: 600;
+  margin-left: 6px;
+  height: 31px;
+}
+
+#specifyColor {
+  accent-color: #f1c232;
+}
+
+.form .gender {
+  color: #fff;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-evenly;
+  width: 35%;
+  padding-right: 10px;
+  margin-bottom: 7px;
+}
+.form .td-label {
+  color: #fff;
+  font-weight: 600;
+  height: 31px;
+  margin: 5px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  transition: 0.5s;
+  outline: none;
+}
+
+input[type="text"]:focus {
+  border: 3px solid #2f1e84;
+}
+.input-box.error {
+  border: 2px solid red;
+}
+
+.error {
+  color: #ff0000;
+  font-weight: 600;
+  margin-top: 5px;
+  font-size: 15px;
+}
+
+.btn-yll {
+  background-color: #f1c232;
+  color: #121212;
+  padding: 5px 15px;
+  border-radius: 10px;
+  margin-right: 2px;
+  font-weight: 600;
+}
+
+.btn-yll:hover {
+  background-color: #121212;
+  color: #fff;
+  cursor: pointer;
+}
+
+#reset {
+  background-color: #bd081c;
+  color: #fff;
+}
+
+#reset:hover {
+  background-color: #121212;
+  color: #fff;
+}
+
+/* halaman hasil */
+
+.right-column {
+  display: flex;
+  flex-direction: column;
+  margin: 24px;
+  margin-top: 30px;
+  margin-left: -50px;
+}
+
+.result-box {
+  background-color: #fff;
+  border-radius: 18px;
+  padding: 70px;
+  margin-right: 2.5em;
+  margin-bottom: 1em;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.result-box p:first-child {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: rgb(0, 162, 255);
+  margin-bottom: 15px;
+}
+
+.result-box .result p:last-child {
+  font-size: 1em;
+  width: 30%;
+  padding: 10px;
+  background-color: rgb(0, 162, 255);
+  color: white;
+  margin-top: -25px;
+  border-radius: 5px;
+}
+
+.calculation-result button {
+  padding: 10px;
+  background-color: #f1c232;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+.btn-bawah button {
+  padding: 10px;
+  background-color: #f1c232;
+  margin-left: 5px;
+  margin-right: -20px 20px;
+  margin-bottom: 20px;
+}
+
+.explanation {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.explanation h2 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: #005acd;
+}
+
+.result-box .calculation-result,
+.result-box .disease1,
+.result-box .disease2 {
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+  line-height: 3.9em;
+  margin-bottom: 15px;
+  background: linear-gradient(135deg, #2f1e84 0%, #5d63ed 100%);
+}
+
+.result-box .calculation-result p:first-child,
+.disease1 p,
+.disease2 p {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.result-box .calculation-result p:nth-child(2) {
+  font-size: 5em;
+  font-weight: bold;
+}
+
+.result-box .consultation {
+  text-align: justify;
+  line-height: 1.5em;
+  margin-bottom: 20px;
+  position: relative;
+  padding-top: 20px;
+}
+
+.consultation button {
+  padding: 10px;
+  background-color: #f1c232;
+  margin-left: 10px 5px;
+  margin-right: 5px;
+  margin-top: -12px;
+  margin-bottom: 20px;
+}
+
+.consultation p {
+  padding: 30px 0px;
+}
+
+.note {
+  padding: 20px;
+  font-weight: 600;
+}
+
+.result-box .disease1 ol,
+.result-box .disease2 ol {
+  line-height: 3.5em;
+  font-size: 20px;
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.result-box .btn-bawah {
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+}
+
+.download {
+  color: #fff;
+  text-align: center;
+  font-size: 1.2em;
+  padding: 50px 0px;
+  margin-bottom: -200px;
+}
+
+.download-apps img {
+  margin: 10px 3px;
+  width: 25%;
+  cursor: pointer;
+}
+
+.result-box .download {
+  font-size: 0.6em;
+  padding-bottom: 200px;
+}
+
+.disable {
+  display: none;
+}
+
+aside {
+  position: absolute;
+  width: 39%;
+  height: 395px;
+  margin: -15px 50px;
+  align-items: left;
+  color: #fff;
+}
+
+aside h4 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+aside > ol > li {
+  margin: 4px 19px;
+  padding: 0px 9px;
+  font-size: 16px;
+}
+
+aside p {
+  margin-top: 1.8em;
+  font-size: 16px;
+}
+
+/* Tablet Responsive */
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  #hero {
+    padding: 20px;
+    text-align: center;
+  }
+
+  #description {
+    width: 100%;
+    font-size: 12px;
+    margin: 50px 0;
+  }
+
+  .left-column {
+    order: initial;
+    padding: 1rem;
+    margin-bottom: -50px;
+    flex: 1;
+  }
+
+  .right-column {
+    margin: auto;
+    padding: 20px;
+  }
+
+  .result-box {
+    margin: auto;
+    width: 60%;
+  }
+
+  .calculation-box .form {
+    margin: 5px;
+    padding: 1rem;
+    font-size: 15px;
+  }
+
+  .result-box p:first-child {
+    font-size: 1em;
+    font-weight: bold;
+    color: rgb(0, 162, 255);
+  }
+
+  .result-box .result p:last-child {
+    width: 92%;
+    background-color: rgb(0, 162, 255);
+    color: white;
+  }
+
+  .result-box .disease1 ol,
+  .result-box .disease2 ol {
+    line-height: 1.5em;
+    font-size: 19px;
+    list-style: none;
+  }
+
+  .result-box .calculation-result,
+  .result-box .disease1,
+  .result-box .disease2 {
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    line-height: 3.7em;
+    margin-bottom: 10px;
+    background: linear-gradient(135deg, #2f1e84 0%, #5d63ed 100%);
+  }
+
+  .result-box .btn-bawah {
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+  }
+
+  .download {
+    display: flex;
+    font-weight: 600;
+    margin-top: 20px;
+    padding: 2rem;
+  }
+
+  .download-apps img {
+    margin: 10px 3px;
+    width: 39%;
+    cursor: pointer;
+  }
+
+  aside {
+    width: 85%;
+    margin: 725px 50px;
+    justify-content: center;
+  }
+
+  aside h4 {
+    font-size: 16px;
+  }
+
+  aside > ol > li {
+    font-size: 11px;
+  }
+
+  aside p {
+    width: 80%;
+    font-size: 12px;
+  }
+}
+
+/* Mobile Responsive */
+
+@media only screen and (max-width: 480px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  #hero {
+    padding: 20px;
+    text-align: center;
+  }
+
+  #description {
+    width: 100%;
+    font-size: 12px;
+    margin: 50px 0;
+  }
+
+  .left-column {
+    order: initial;
+    padding: 1rem;
+    margin-bottom: -50px;
+    flex: 1;
+  }
+
+  .right-column {
+    margin: auto;
+    padding: 20px;
+  }
+
+  .result-box {
+    margin: auto;
+    width: 60%;
+    padding: 20px;
+  }
+
+  .calculation-box .form {
+    margin: 5px;
+    padding: 1rem;
+    font-size: 15px;
+  }
+
+  .result-box p:first-child {
+    font-size: 1em;
+    font-weight: bold;
+    color: rgb(0, 162, 255);
+  }
+
+  .result-box .result p:last-child {
+    width: 90%;
+    background-color: rgb(0, 162, 255);
+    color: white;
+  }
+
+  .result-box .disease1 ol,
+  .result-box .disease2 ol {
+    line-height: 1.5em;
+    font-size: 19px;
+    list-style: none;
+  }
+
+  .result-box .calculation-result,
+  .result-box .disease1,
+  .result-box .disease2 {
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    line-height: 3.7em;
+    margin-bottom: 10px;
+    background: linear-gradient(135deg, #2f1e84 0%, #5d63ed 100%);
+  }
+
+  .result-box .btn-bawah {
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+  }
+
+  .download {
+    display: flex;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: -500px;
+    padding: 2rem;
+  }
+
+  .download-apps img {
+    margin: 10px 3px;
+    width: 39%;
+    cursor: pointer;
+  }
+
+  aside {
+    width: 77%;
+    margin: 680px 50px;
+    padding-bottom: 5px;
+    justify-content: center;
+  }
+
+  aside h4 {
+    font-size: 16px;
+  }
+
+  aside > ol > li {
+    font-size: 11px;
+  }
+
+  aside p {
+    width: 80%;
+    font-size: 12px;
+  }
+}
